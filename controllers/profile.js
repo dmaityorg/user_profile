@@ -64,8 +64,7 @@ module.exports = {
             user_id: req.body.user_id || classroom.user_id,
             fullname: req.body.fullname || classroom.fullname,
             birthdate: req.body.birthdate || classroom.birthdate,
-            gender: req.body.gender || classroom.gender,
-            position: req.body.position || classroom.position,
+            gender: req.body.gender || classroom.gender
           })
           .then(() => res.status(200).send(profile))
           .catch((error) => res.status(400).send(error));
