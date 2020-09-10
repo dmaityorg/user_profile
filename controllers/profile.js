@@ -7,7 +7,7 @@ module.exports = {
       .findAll({
         include: [{
           model: User,
-          as: 'user'
+          as: 'User'
         }],
       })
       .then((profiles) => res.status(200).send(profiles))
@@ -19,7 +19,7 @@ module.exports = {
       .findByPk(req.params.id, {
         include: [{
           model: User,
-          as: 'user'
+          as: 'User'
         }],
       })
       .then((profile) => {
@@ -50,7 +50,7 @@ module.exports = {
       .findById(req.params.id, {
         include: [{
           model: User,
-          as: 'user'
+          as: 'User'
         }],
       })
       .then(profile => {
